@@ -1,0 +1,68 @@
+
+.container-fluid{
+  width: 48rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  }
+
+  
+.login,
+.image {
+  min-height: 50vh;
+}
+
+.bg-image {
+  background-image: url('../../.././public/img/Sign up/login hero.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+label{
+  color: blue;
+}
+
+p{
+  
+  color: black;
+  font-size: 20px;
+  font-family: 'Arial';
+}
+
+@media (max-width:767px) {
+    .login,
+.image {
+  min-height: 100vh;
+}
+
+.container-fluid{
+    width: 100%;
+}
+}
+
+
+
+
+.focus:focus {
+  background-color: blue; text-decoration: underline;width:100px;height: 10px;border-radius: 5px;
+  
+}
+/* :target {
+  color: red;
+} */
+
+/* li,a:active {
+  color: green;
+  background-color: yellow;
+} */
+
+li:hover{
+background-color: none;
+}
+
+ul {
+  list-style-type: none;
+}

@@ -1,0 +1,77 @@
+
+<div class="container-fluid">
+    <div class="row no-gutter">
+        <!-- The image half -->
+        <div class="col-md-5 d-none d-md-flex bg-image justify-content-center">
+            <img src="img/Sign up 2/Illustration - Business, workflow, cowormeeting, conversation, discussion, team work, man, woman.png" width="300px"> 
+        </div>
+           
+
+        <!-- The content half -->
+        <div class="col-md-7 bg-light" style="background-color:#F1F6F8">
+            <div class="login d-flex align-items-center py-5">
+
+                <!-- Demo content-->
+                <div class="container" >
+                    <div class="row">
+                        <p *ngIf="!isBoolean" style="color:red">{{errMsg}}</p>
+                        <div *ngIf="!isBoolean" class="col-lg-10 col-xl-7 mx-auto">
+                            
+                            <p class=" mb-4 ">Welcome</p>
+                            <form>
+                                <div class="form-group mb-3">
+                                    <label class="mb-1 ">Enter email id</label>
+                                    <input id="inputEmail" type="email" placeholder="Enter full name" #email autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <h6>(OR)</h6>
+                                <div class="form-group mb-3">
+                                    <label class="mb-1 ">Enter mobile number</label>
+                                    <input id="inputPassword" type="text" placeholder="91+" #pass class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary rounded-pill" type="button" (click)="nextClick(email.value,pass.value)">Sign up</button>
+                                    
+                                  </div>
+                            </form>
+                        </div>
+
+                        <div *ngIf="isNext" class="col-lg-10 col-xl-7 mx-auto">
+                            
+                            <p class=" mb-4 ">Welcome Back {{validName}}</p>
+                            <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+                                <div class="form-group mb-3">
+                                    <label class="mb-2 ">Enter email id</label>
+                                    <input id="inputEmail" type="email" formControlName="email" readonly autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                               
+                                <div class="form-group mb-4">
+                                    <label class="mb-2 ">Enter Password</label>
+                                    <input id="inputPassword" type="password" formControlName="password" placeholder="Enter password"  class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    <span *ngIf="loginForm.errors?.['PasswordNoMatch'] && loginForm.touched " style="color: red;">
+                                       <small>Incorrect password , Please try again</small> 
+                                      </span>
+                                </div>
+                                
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary rounded-pill" >Next</button>
+                                    
+                                  </div>
+                            </form>
+                        </div>
+
+                        <div *ngIf="isLogin" class="col-lg-12 col-xl-7 mx-auto text-center">
+                            
+                            <img src="img/Sign up 2/Group3835.png">
+                            <p class="text-center mb-4 ">Logging you in....</p>
+                            <h6><span style="font-size: 12px;">Kindly waight as we are curating data accordingly.</span></h6>
+                         
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>
