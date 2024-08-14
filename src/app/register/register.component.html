@@ -103,7 +103,21 @@
 
                                  <div class="form-group mb-4">
                                     <label class="mb-2 ">Birth Date</label>
-                                    <input id="inputEmail" type="email"  readonly autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    <form class="row row-cols-sm-auto">
+                                        <div class="col-12">
+                                            <div class="input-group">
+                                                <input
+                                                    class="form-control"
+                                                    placeholder="yyyy-mm-dd"
+                                                    name="dp"
+                                                    [(ngModel)]="model"
+                                                    ngbDatepicker
+                                                    #d="ngbDatepicker"
+                                                />
+                                                <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+                                            </div>
+                                        </div>
+                                    </form>
    
                                     </div>
                                     <div class="row">

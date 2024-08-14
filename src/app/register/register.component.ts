@@ -6,6 +6,7 @@ import {
   ValidationErrors,
   ValidatorFn,
 } from '@angular/forms';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { obj } from '../model/login';
@@ -26,6 +27,8 @@ export const confirmPasswordValidator: ValidatorFn = (
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
+
+  model!: NgbDateStruct;
 
   isBoolean:boolean=false;
   isNext:boolean=false;

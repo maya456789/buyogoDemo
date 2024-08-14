@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {  NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
+    NgbDatepickerModule,
    
   ],
   providers: [],
